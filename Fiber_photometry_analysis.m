@@ -17,16 +17,16 @@
 %% doric photometry data basic script
 % import data A2:E3403050 and select 'Numeric Matrix' from drop down menu.
 % make sure 'delimited' is checked in the upper right hand corner.
-load('/Volumes/Drive/Tian Lab/Data Analysis/FP_analysis/matlab/digitone_mat/digitoneday3noshockpart.mat')
-s2tone =digitoneday3noshockpart;
+load('/Volumes/Drive/Tian Lab/Data Analysis/FP_analysis/matlab/digitone_mat/digitoneday2.mat')
+s2tone =digitoneday2;
 
-data = day33(:,:);
+data = drday2r1(:,:);
 %data(:,2:3) = [];
 
 % manually enter frame # of first '0' value in digi column, e.g.
 %digi(:,1) = digi(:,1)-digi(9697,1);
 digi = data(:,1:2);
-digi(:,1) = digi(:,1)-digi(5004,1);
+digi(:,1) = digi(:,1)-digi(4002,1);
 data(:,1) = digi(:,1);
 
 %%
